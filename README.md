@@ -1,14 +1,25 @@
 
-# AFE GitHub Task
+# Personal Expense Tracker in C
 
-## Objective
-Create a GitHub repository and commit a C program.
+## Description
+A menu-driven C application to manage personal income and expenses.
 
-## Language Used
-- C
+## Features
+- Add income
+- Add expenses
+- View transaction history
+- Search by category
+- Display income, expenses, and balance
+- File handling for data storage
 
-## Program
-- Hello World
+## Technologies
+- C Programming
+- Structures
+- Functions
+- File Handling
 
 ## Author
-Your Name
+HRITIK ANAND
+
+## SRN
+R25EJ042
