@@ -1,0 +1,105 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Arial;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+background:#000;
+position:fixed;
+width:100%;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+display:flex;
+justify-content:space-around;
+align-items:center;
+height:100vh;
+padding:40px;
+}
+
+.hero img{
+width:300px;
+border-radius:50%;
+border:5px solid cyan;
+}
+
+.hero span{
+color:cyan;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:cyan;
+color:black;
+margin-top:20px;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+
+section{
+padding:100px 50px;
+}
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1d1d1d;
+padding:30px;
+border-radius:10px;
+flex:1;
+min-width:220px;
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:cyan;
+color:black;
+}
+
+.social a{
+font-size:35px;
+margin:20px;
+color:cyan;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
