@@ -1,55 +1,66 @@
-const words=[
-"Computer Science Student",
-"C Programmer",
+window.onload=function(){
+document.getElementById("loader").style.display="none";
+};
+
+const text=[
+"Software Developer",
 "Python Programmer",
-"Web Developer"
+"C Programmer",
+"AI Enthusiast"
 ];
 
-let i=0;
-let j=0;
-let current="";
-let isDeleting=false;
+let i=0,j=0,del=false;
 
-function type(){
+function typing(){
 
-current=words[i];
+let t=text[i];
 
-if(isDeleting){
+document.getElementById("typing").innerHTML=t.substring(0,j);
 
-j--;
-
-}else{
-
+if(!del){
 j++;
-
-}
-
-document.getElementById("typing").innerHTML=current.substring(0,j);
-
-if(!isDeleting && j==current.length){
-
-isDeleting=true;
-
-setTimeout(type,1000);
-
+if(j>t.length){
+del=true;
+setTimeout(typing,1000);
 return;
+}
+}
+else{
+j--;
+if(j==0){
+del=false;
+i=(i+1)%text.length;
+}
+}
+
+setTimeout(typing,del?60:120);
 
 }
 
-if(isDeleting && j==0){
+typing();
 
-isDeleting=false;
+const topBtn=document.getElementById("topBtn");
 
-i++;
+window.onscroll=function(){
 
-if(i==words.length)
+if(document.documentElement.scrollTop>300)
 
-i=0;
+topBtn.style.display="block";
 
-}
+else
 
-setTimeout(type,isDeleting?70:120);
+topBtn.style.display="none";
 
-}
+};
 
-type();
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
