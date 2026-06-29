@@ -1,380 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hritik Anand — Software Developer &amp; Robotics Enthusiast</title>
-  <meta name="description" content="Portfolio of Hritik Anand, B.Tech Computer Science & IT student, aspiring software developer and Python/C programmer, building software, AI and robotics projects.">
-  <meta name="keywords" content="Hritik Anand, Software Developer, Python Programmer, C Programmer, Robotics, REVA University, Computer Science Student">
-  <meta name="author" content="Hritik Anand">
-  <meta property="og:title" content="Hritik Anand — Software Developer & Robotics Enthusiast">
-  <meta property="og:description" content="B.Tech Computer Science & IT student crafting software, AI and embedded systems projects.">
-  <meta property="og:type" content="website">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hritik Anand | Portfolio</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- ============ LOADER ============ -->
-  <div id="loader" aria-hidden="true">
-    <div class="loader-board">
-      <span class="loader-trace"></span>
-      <p class="loader-text">BOOTING<span class="dots">...</span></p>
-    </div>
-  </div>
+<header>
 
-  <!-- ============ CIRCUIT SCROLL TRACE (signature element) ============ -->
-  <svg id="trace-rail" viewBox="0 0 4 100" preserveAspectRatio="none" aria-hidden="true">
-    <path id="trace-path" d="M2,0 L2,100" />
-    <path id="trace-fill" d="M2,0 L2,100" />
-  </svg>
+<nav>
 
-  <!-- ============ NAVIGATION ============ -->
-  <header class="navbar" id="navbar">
-    <nav class="nav-container">
-      <a href="#home" class="logo">
-        <span class="logo-bracket">&lt;</span>HA<span class="logo-bracket">/&gt;</span>
-      </a>
+<h2>Hritik Anand</h2>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<ul>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active-link" data-index="00">Home</a></li>
-        <li><a href="#about" class="nav-link" data-index="01">About</a></li>
-        <li><a href="#education" class="nav-link" data-index="02">Education</a></li>
-        <li><a href="#skills" class="nav-link" data-index="03">Skills</a></li>
-        <li><a href="#projects" class="nav-link" data-index="04">Projects</a></li>
-        <li><a href="#achievements" class="nav-link" data-index="05">Achievements</a></li>
-        <li><a href="#contact" class="nav-link" data-index="06">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<li><a href="#home">Home</a></li>
 
-  <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="home">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-container">
-        <div class="hero-text">
-          <p class="hero-eyebrow"><span class="pulse-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
-          <h1 class="hero-name">Hritik Anand</h1>
-          <h2 class="hero-typing">
-            <span id="typingText"></span><span class="cursor">|</span>
-          </h2>
-          <p class="hero-summary">
-            I'm a passionate Computer Science &amp; Information Technology student who loves turning ideas into
-            working systems — from lines of Python and C to circuits that move on their own. My curiosity spans
-            software development, artificial intelligence, embedded systems, robotics and the web, and I'm
-            constantly building, breaking and rebuilding things to learn faster.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
-            <a href="resume.pdf" class="btn btn-outline" download><i class="fa-solid fa-download"></i> Download Resume</a>
-          </div>
-          <div class="hero-socials">
-            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/hritik-anand-946173363/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="mailto:example@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
+<li><a href="#about">About</a></li>
 
-        <div class="hero-visual">
-          <div class="chip-frame">
-            <div class="chip-pins top"></div>
-            <div class="chip-pins bottom"></div>
-            <div class="chip-pins left"></div>
-            <div class="chip-pins right"></div>
-            <div class="profile-photo">
-              <img src="https://via.placeholder.com/360x360/121626/4f7cff?text=HA" alt="Hritik Anand profile photo" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
-        <span>SCROLL</span>
-        <i class="fa-solid fa-chevron-down"></i>
-      </a>
-    </section>
+<li><a href="#skills">Skills</a></li>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <p class="section-tag">01 / ABOUT</p>
-      <h2 class="section-title">Who I Am</h2>
+<li><a href="#education">Education</a></li>
 
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>
-            I'm currently pursuing my B.Tech in Computer Science &amp; Information Technology at REVA University,
-            and I genuinely enjoy the process of learning how things work — and then making them work better.
-            Whether it's untangling a stubborn bug, designing a cleaner algorithm, or wiring up a robot that
-            actually follows the line it's supposed to, I find real satisfaction in solving problems end to end.
-          </p>
-          <p>
-            Outside of coursework, I build small projects to test what I've learned: embedded systems with
-            Arduino, scripts in Python and C, and the occasional web page just to see an idea come to life on
-            screen. I'm early in my journey, but deliberate about it — every project is a chance to pick up a
-            new tool, language or way of thinking.
-          </p>
-        </div>
+<li><a href="#projects">Projects</a></li>
 
-        <div class="about-stats reveal">
-          <div class="stat-card">
-            <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
-            <p>Languages Learned</p>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="1">0</span><span class="stat-suffix">+</span>
-            <p>Robotics Project</p>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span>
-            <p>Certifications</p>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number" data-target="2029">0</span>
-            <p>Graduation Year</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<li><a href="#contact">Contact</a></li>
 
-    <!-- ============ EDUCATION ============ -->
-    <section class="section" id="education">
-      <p class="section-tag">02 / EDUCATION</p>
-      <h2 class="section-title">Academic Timeline</h2>
+</ul>
 
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-marker"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="timeline-card">
-            <span class="timeline-date">2025 — 2029</span>
-            <h3>Bachelor of Technology (B.Tech)</h3>
-            <p class="timeline-sub">Computer Science &amp; Information Technology</p>
-            <p class="timeline-place"><i class="fa-solid fa-location-dot"></i> REVA University</p>
-            <p class="timeline-desc">
-              Building a strong foundation in programming, data structures, and systems thinking while exploring
-              electives in AI, embedded systems and web technologies.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+</nav>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section" id="skills">
-      <p class="section-tag">03 / SKILLS</p>
-      <h2 class="section-title">Tools of the Trade</h2>
+</header>
 
-      <div class="skills-grid">
-        <div class="skills-col reveal">
-          <h3 class="skills-col-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
+<section id="home" class="hero">
 
-          <div class="skill-bar" data-percent="78">
-            <div class="skill-bar-head">
-              <span>C Programming</span><span class="skill-percent">0%</span>
-            </div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
+<div class="hero-text">
 
-          <div class="skill-bar" data-percent="82">
-            <div class="skill-bar-head">
-              <span>Python</span><span class="skill-percent">0%</span>
-            </div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-        </div>
+<h1>Hi, I'm <span>Hritik Anand</span></h1>
 
-        <div class="skills-col reveal">
-          <h3 class="skills-col-title"><i class="fa-solid fa-microchip"></i> Technical Skills</h3>
+<h2 id="typing"></h2>
 
-          <div class="skill-bar" data-percent="85">
-            <div class="skill-bar-head"><span>Problem Solving</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar" data-percent="75">
-            <div class="skill-bar-head"><span>Data Structures</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar" data-percent="70">
-            <div class="skill-bar-head"><span>Git &amp; GitHub</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar" data-percent="72">
-            <div class="skill-bar-head"><span>Arduino Programming</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar" data-percent="68">
-            <div class="skill-bar-head"><span>HTML</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar" data-percent="62">
-            <div class="skill-bar-head"><span>CSS</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar" data-percent="45">
-            <div class="skill-bar-head"><span>JavaScript (Basic)</span><span class="skill-percent">0%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<p>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section" id="projects">
-      <p class="section-tag">04 / PROJECTS</p>
-      <h2 class="section-title">Featured Build</h2>
+B.Tech Computer Science & Information Technology student at REVA University passionate about programming and software development.
 
-      <div class="projects-grid">
-        <article class="project-card reveal">
-          <div class="project-card-glow"></div>
-          <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
-          <h3>Line Follower Robot using Arduino</h3>
-          <p>
-            Designed and built an autonomous robot that detects and follows a predefined path using IR sensors,
-            driving DC motors through a motor driver for stable, continuous movement — a hands-on dive into
-            embedded control and real-time sensor feedback.
-          </p>
-          <div class="tag-list">
-            <span class="tag">Arduino UNO</span>
-            <span class="tag">Embedded C</span>
-            <span class="tag">IR Sensors</span>
-            <span class="tag">Robotics</span>
-            <span class="tag">Electronics</span>
-          </div>
-          <a href="#" class="project-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </article>
+</p>
 
-        <article class="project-card project-card-ghost reveal" aria-hidden="true">
-          <div class="project-icon"><i class="fa-solid fa-plus"></i></div>
-          <h3>More builds in progress</h3>
-          <p>New projects in software and robotics are currently in the works — check back soon.</p>
-        </article>
-      </div>
-    </section>
+<a href="#contact" class="btn">Contact Me</a>
 
-    <!-- ============ ACHIEVEMENTS ============ -->
-    <section class="section" id="achievements">
-      <p class="section-tag">05 / ACHIEVEMENTS &amp; CERTIFICATIONS</p>
-      <h2 class="section-title">Milestones</h2>
+</div>
 
-      <div class="cards-grid">
-        <div class="mini-card reveal">
-          <i class="fa-solid fa-medal"></i>
-          <h4>NSO Olympiad</h4>
-          <p>Bronze Medalist</p>
-        </div>
-        <div class="mini-card reveal">
-          <i class="fa-solid fa-spell-check"></i>
-          <h4>State Level SpellBee</h4>
-          <p>Participant</p>
-        </div>
-        <div class="mini-card reveal">
-          <i class="fa-solid fa-certificate"></i>
-          <h4>Innovation &amp; Entrepreneurship</h4>
-          <p>Wadhwani Foundation</p>
-        </div>
-        <div class="mini-card reveal">
-          <i class="fa-solid fa-chart-line"></i>
-          <h4>Scaler Business Program</h4>
-          <p>Certification</p>
-        </div>
-        <div class="mini-card reveal">
-          <i class="fa-solid fa-python"></i>
-          <h4>Python for Data Science</h4>
-          <p>Certification</p>
-        </div>
-        <div class="mini-card reveal">
-          <i class="fa-solid fa-chart-pie"></i>
-          <h4>Data Visualization in Python</h4>
-          <p>Certification</p>
-        </div>
-      </div>
-    </section>
+<div class="hero-image">
 
-    <!-- ============ HOBBIES ============ -->
-    <section class="section" id="hobbies">
-      <p class="section-tag">06 / BEYOND CODE</p>
-      <h2 class="section-title">Hobbies &amp; Interests</h2>
+<img src="profile.jpg" alt="Profile">
 
-      <div class="hobbies-grid">
-        <div class="hobby-item reveal"><i class="fa-solid fa-laptop-code"></i><span>Coding</span></div>
-        <div class="hobby-item reveal"><i class="fa-solid fa-robot"></i><span>Robotics</span></div>
-        <div class="hobby-item reveal"><i class="fa-solid fa-newspaper"></i><span>Tech Articles</span></div>
-        <div class="hobby-item reveal"><i class="fa-solid fa-lightbulb"></i><span>Learning New Tech</span></div>
-        <div class="hobby-item reveal"><i class="fa-solid fa-puzzle-piece"></i><span>Problem Solving</span></div>
-        <div class="hobby-item reveal"><i class="fa-solid fa-chess-knight"></i><span>Chess</span></div>
-        <div class="hobby-item reveal"><i class="fa-solid fa-music"></i><span>Music</span></div>
-      </div>
-    </section>
+</div>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact">
-      <p class="section-tag">07 / CONTACT</p>
-      <h2 class="section-title">Let's Build Something</h2>
+</section>
 
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <p class="contact-intro">
-            Have an opportunity, a project idea, or just want to talk tech and robotics? My inbox is open.
-          </p>
+<section id="about">
 
-          <ul class="contact-list">
-            <li><i class="fa-solid fa-user"></i><span>Hritik Anand</span></li>
-            <li><a href="mailto:example@email.com"><i class="fa-solid fa-envelope"></i><span>example@email.com</span></a></li>
-            <li><a href="tel:+91XXXXXXXXXX"><i class="fa-solid fa-phone"></i><span>+91-XXXXXXXXXX</span></a></li>
-          </ul>
+<h2>About Me</h2>
 
-          <div class="contact-socials">
-            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/hritik-anand-946173363/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
-        </div>
+<p>
 
-        <form class="contact-form reveal" id="contactForm" novalidate>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary full-width">
-            <i class="fa-solid fa-paper-plane"></i> Send Message
-          </button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+I am currently pursuing B.Tech in Computer Science and Information Technology at REVA University (2025–2029). I enjoy learning new technologies and building software solutions.
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>&copy; 2026 Hritik Anand. All rights reserved.</p>
-      <p>Designed with <i class="fa-solid fa-heart"></i> using HTML, CSS &amp; JavaScript.</p>
-    </div>
-  </footer>
+</p>
 
-  <!-- ============ SCROLL TO TOP ============ -->
-  <button id="scrollTopBtn" aria-label="Scroll to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
+</section>
 
-  <script src="script.js"></script>
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-c"></i>
+
+<h3>C Programming</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-python"></i>
+
+<h3>Python</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-html5"></i>
+
+<h3>HTML</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-css3-alt"></i>
+
+<h3>CSS</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-brands fa-js"></i>
+
+<h3>JavaScript</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="edu">
+
+<h3>REVA University</h3>
+
+<p>B.Tech in Computer Science & Information Technology</p>
+
+<p>2025 - 2029</p>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Portfolio Website</h3>
+
+<p>Professional personal portfolio website.</p>
+
+</div>
+
+<div class="card">
+
+<h3>News Website</h3>
+
+<p>Responsive news portal built using HTML, CSS & JavaScript.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Employee Salary Predictor</h3>
+
+<p>Machine Learning project using Python.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: yourmail@gmail.com</p>
+
+<p>Phone: +91 XXXXXXXXXX</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Hritik Anand
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
-</html>
+
+  </html>
