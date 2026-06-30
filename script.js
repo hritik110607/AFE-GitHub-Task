@@ -1,66 +1,180 @@
-window.onload=function(){
-document.getElementById("loader").style.display="none";
-};
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // ==========================================
+    // 1. PAGE LOADER CLOSURE
+    // ==========================================
+    const loader = document.getElementById("loader");
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
+        }, 300); // Clean artificial grace period
+    });
 
-const text=[
-"Software Developer",
-"Python Programmer",
-"C Programmer",
-"AI Enthusiast"
-];
+    // ==========================================
+    // 2. MOBILE HAMBURGER MENU CONTROL
+    // ==========================================
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-let i=0,j=0,del=false;
+    const toggleMenu = () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    };
 
-function typing(){
+    hamburger.addEventListener("click", toggleMenu);
+    navLinks.forEach(link => link.addEventListener("click", () => {
+        if (navMenu.classList.contains("active")) toggleMenu();
+    }));
 
-let t=text[i];
+    // ==========================================
+    // 3. STICKY NAVBAR & BACK-TO-TOP BUTTON VISIBILITY
+    // ==========================================
+    const navbar = document.querySelector(".navbar");
+    const topBtn = document.getElementById("scrollToTopBtn");
 
-document.getElementById("typing").innerHTML=t.substring(0,j);
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
 
-if(!del){
-j++;
-if(j>t.length){
-del=true;
-setTimeout(typing,1000);
-return;
-}
-}
-else{
-j--;
-if(j==0){
-del=false;
-i=(i+1)%text.length;
-}
-}
+        if (window.scrollY > 500) {
+            topBtn.classList.add("show");
+        } else {
+            topBtn.classList.remove("show");
+        }
+    });
 
-setTimeout(typing,del?60:120);
+    topBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 
-}
+    // ==========================================
+    // 4. ANIMATED TYPING PARSER EFFECT
+    // ==========================================
+    const typeElement = document.querySelector(".typing-text");
+    if (typeElement) {
+        const words = JSON.parse(typeElement.getAttribute("data-words"));
+        let wordIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
 
-typing();
+        const handleType = () => {
+            const currentWord = words[wordIdx];
+            if (isDeleting) {
+                typeElement.textContent = currentWord.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typeElement.textContent = currentWord.substring(0, charIdx + 1);
+                charIdx++;
+            }
 
-const topBtn=document.getElementById("topBtn");
+            let typeSpeed = isDeleting ? 40 : 80;
 
-window.onscroll=function(){
+            if (!isDeleting && charIdx === currentWord.length) {
+                typeSpeed = 2000; // Standstill on completion
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                wordIdx = (wordIdx + 1) % words.length;
+                typeSpeed = 400; // Switch delay
+            }
 
-if(document.documentElement.scrollTop>300)
+            setTimeout(handleType, typeSpeed);
+        };
+        setTimeout(handleType, 1000);
+    }
 
-topBtn.style.display="block";
+    // ==========================================
+    // 5. INTERSECTION OBSERVER FOR INTERACTIONS
+    // ==========================================
+    
+    // Core Layout Reveal Blocks
+    const revealBlocks = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
 
-else
+    revealBlocks.forEach(block => revealObserver.observe(block));
 
-topBtn.style.display="none";
+    // Skill Bar Fill Initialization
+    const skillBars = document.querySelectorAll(".skill-progress");
+    const skillsSection = document.getElementById("skills");
 
-};
+    const skillObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillBars.forEach(bar => {
+                    bar.style.width = bar.getAttribute("data-width");
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
 
-topBtn.onclick=function(){
+    if (skillsSection) skillObserver.observe(skillsSection);
 
-window.scrollTo({
+    // Numeric Ticking Counter Logic
+    const counters = document.querySelectorAll(".counter-number");
+    const aboutSection = document.getElementById("about");
 
-top:0,
+    const runCounters = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute("data-target");
+            const increment = target / 40; // Split speed profile
+            
+            const updateCount = () => {
+                const current = +counter.innerText;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current + increment);
+                    setTimeout(updateCount, 25);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
 
-behavior:"smooth"
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                runCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
 
+    if (aboutSection) counterObserver.observe(aboutSection);
+
+    // ==========================================
+    // 6. SCROLL NAVIGATION HIGH LIGHT SYNCHRONIZER
+    // ==========================================
+    const sections = document.querySelectorAll("section");
+    
+    window.addEventListener("scroll", () => {
+        let currentActiveSectionId = "";
+        sections.forEach(sec => {
+            const sectionTop = sec.offsetTop;
+            const sectionHeight = sec.clientHeight;
+            if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                currentActiveSectionId = sec.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${currentActiveSectionId}`) {
+                link.classList.add("active");
+            }
+        });
+    });
 });
-
-};
