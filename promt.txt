@@ -1,0 +1,130 @@
+Prompt
+Create a high-end, professional, responsive, and visually stunning personal portfolio website using HTML, CSS, and JavaScript. Generate the complete source code for index.html, style.css, and script.js separately.
+The website should have a premium modern design inspired by portfolios of software engineers from companies like Google, Microsoft, Apple, and Amazon.
+
+Design Requirements
+Modern and elegant UI
+Dark theme with blue and purple gradient accents
+Glassmorphism cards
+Fully responsive (Desktop, Tablet & Mobile)
+Smooth scrolling navigation
+Sticky navigation bar
+Hero section with animated typing effect
+Attractive hover effects
+Scroll reveal animations
+Professional icons using Font Awesome
+Google Font (Poppins)
+Animated skill progress bars
+Beautiful project cards
+Timeline-style education section
+Animated counters
+Contact form
+Scroll-to-top button
+Loading animation
+Professional footer
+Smooth page transitions
+Clean, well-commented code
+SEO-friendly HTML
+Organized folder structure
+Portfolio Information
+Hero Section
+Name
+Hritik Anand
+
+Title
+B.Tech Computer Science & Information Technology Student
+Aspiring Software Developer
+Python & C Programmer
+
+Professional Summary
+Write a professional introduction explaining that I am a passionate Computer Science and Information Technology student with interests in software development, artificial intelligence, embedded systems, robotics, web development, and continuous learning.
+About Me
+Create a professional About section highlighting my enthusiasm for learning new technologies, solving programming problems, and building innovative software and hardware projects.
+Education
+REVA University
+Bachelor of Technology (B.Tech)
+Computer Science and Information Technology
+2025 – 2029
+Display it as a modern education timeline.
+Skills
+Display skills with animated progress bars.
+Programming Languages
+
+C Programming
+Python
+Technical Skills
+
+Problem Solving
+Data Structures
+Git & GitHub
+Arduino Programming
+HTML
+CSS
+JavaScript (Basic)
+Projects
+Create beautiful project cards.
+
+Line Follower Robot using Arduino
+Description:
+Designed and developed an autonomous Line Follower Robot using Arduino UNO, IR Sensors, Motor Driver and DC Motors. The robot detects and follows a predefined path using infrared sensors while maintaining stable movement through efficient motor control.
+Technologies Used
+
+Arduino UNO
+Embedded C
+IR Sensors
+Robotics
+Electronics
+Achievements
+Display attractive achievement cards.
+Include:
+
+NSO Olympiad Bronze Medalist
+State Level SpellBee Participant
+Certifications
+Display certificate cards.
+Include the following certifications:
+
+Innovation and Entrepreneurship – Wadhwani Foundation
+Scaler Business Program
+Python for Data Science
+Data Visualization in Python
+Hobbies
+Display icons for hobbies.
+Include:
+
+Coding
+Robotics
+Reading Technology Articles
+Learning New Technologies
+Problem Solving
+Chess
+Music
+Contact Section
+Include
+Name
+Hritik Anand
+LinkedIn
+https://www.linkedin.com/in/hritik-anand-946173363/?skipRedirect=true
+GitHub
+https://github.com/
+Email
+example@email.com
+Phone
++91-XXXXXXXXXX
+Display attractive social media icons linking to my profiles.
+Footer
+Display
+© 2026 Hritik Anand
+Designed with ❤️ using HTML, CSS and JavaScript.
+Additional Requirements
+Use only HTML, CSS and JavaScript.
+Do not use Bootstrap.
+Use modern CSS (Flexbox & Grid).
+Add professional animations.
+Ensure the design looks unique and not like a template.
+The website should be suitable for GitHub Pages deployment.
+Optimize for performance and responsiveness.
+Write clean, modular, and well-commented code.
+Include placeholders for a profile picture and resume download.
+Generate complete code for index.html, style.css, and script.js with no missing sections.
+Make the website visually impressive enough to showcase to recruiters and include subtle interactive effects that enhance the user experience without affecting performance.
